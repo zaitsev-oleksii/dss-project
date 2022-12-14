@@ -1,0 +1,5 @@
+*.ipynb
+dataset
+.ipynb_checkpoints
+notebooks
+.vscode
