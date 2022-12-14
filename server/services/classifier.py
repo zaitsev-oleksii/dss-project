@@ -1,12 +1,12 @@
 import tensorflow as tf
-from config import CLASS_LABELS, INPUT_SHAPE
+from config import CLASS_LABELS, INPUT_SHAPE, MODEL_PATH
 
 HEIGHT, WIDTH, CHANNELS = INPUT_SHAPE
 
 
 class Classifier:
     def __init__(self):
-        self.model = tf.keras.models.load_model('./models/vgg19-2.h5')
+        self.model = tf.keras.models.load_model(MODEL_PATH)
 
     def predict(self, images):
         tensors = map(lambda img: tf.convert_to_tensor(img), images)
